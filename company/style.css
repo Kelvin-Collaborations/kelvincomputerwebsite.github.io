@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); 
+
+*{
+    padding: 0;
+    margin: 0;
+    transition: .25s linear;
+    font-family: "Montserrat",monospace;
+    background: black;
+    color: white;
+}
+
+@keyframes bigsmall {
+    0%  {width: 30dvw;}
+    50% {width: 40dvw;}
+    100%{width: 30dvw;}
+}
+
+.fewbut{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap:10px;
+    width: 100%;
+}
+
+.fewbut .button{
+    width: 100%;
+}
+
+.button:hover{
+    background-color: goldenrod;
+}
+
+.button{
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 1.5%;
+
+}
+
+body{
+    min-width: 100dvw;
+    min-height : 100dvh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.anouncer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.anouncer div{
+    border-radius: 12px;
+    box-shadow: 0px 0px 5px 0.5px rgba(255, 255, 255, 0.39);
+    width: 100%;
+}
+
+.anouncer div:hover{
+    box-shadow: 0px 0px 5px 0.5px rgb(255, 133, 34);
+}
+
+.anouncer div h3{
+    background-color: transparent;
+    font-weight: 250;
+    text-align: center;
+}
+
+
+.anouncer div p{
+    background-color: transparent;
+    text-align: center;
+}
+
+.mobilenavbar{
+    display: none;
+}
+
+#navbar{
+    border-radius: 50px;
+    width: 80%;
+    min-height: 20dvh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#navbar a{
+    text-decoration: none;
+}
+
+#navbar .p2{
+    display: flex;
+    justify-content: space-around;
+    width: 25dvw;
+    align-items: center;
+}
+
+.content{
+    width: 80dvw;
+    min-height : 80dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.bs{
+    animation: bigsmall 3s cubic-bezier(1,0,0,1) infinite;
+}
+
+P{
+    color: grey;
+}
+
+hr{
+    margin: 10px;
+    border-color: rgba(255, 255, 255, 0.418);
+}
+
+h1{
+    font-weight: 450;
+    text-align: center;
+}
+
+a{
+    color: rgb(194, 194, 194);
+}
+
+a:hover{
+    color: white;
+}
+
+
+
+
+
+
+
+/* For Mobile */
+
+@media screen and (max-width:1200px) {
+    #navbar{
+        display: none;
+    }
+
+    
+    .mobilenavbar{
+        display: flex;
+        width: 80%;
+        margin: 10px 0px;
+        padding: 2%;
+        justify-content: space-around;
+        align-items: center;
+        height: 10%;
+    }
+
+    .mobilenavbar svg .selectedtab{
+        color: goldenrod;
+    }
+    .fewbut{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        width: 100%;
+       
+    }
+    .fewbut .button{
+        height: 36px;
+    }
+}
